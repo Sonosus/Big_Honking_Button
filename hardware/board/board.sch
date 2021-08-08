@@ -13,30 +13,6 @@ Comment2 "CC BY-SA 4.0"
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Regulator_Linear:AP2112K-3.3 U3
-U 1 1 5E462447
-P 2850 1950
-F 0 "U3" H 2850 2292 50  0000 C CNN
-F 1 "AP2112K-3.3" H 2850 2201 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2850 2275 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 2850 2050 50  0001 C CNN
-F 4 "AP2112K-3.3TRG1" H 2850 1950 50  0001 C CNN "mpn"
-	1    2850 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xGxx:74AHCT1G125 U7
-U 1 1 5E463A4D
-P 8200 1250
-F 0 "U7" H 8050 1400 50  0000 C CNN
-F 1 "74AHCT1G125" H 8600 1150 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8200 1250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 8200 1250 50  0001 C CNN
-F 4 "SN74AHCT1G125DBVR" H 8200 1250 50  0001 C CNN "mpn"
-	1    8200 1250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2400 1250 2850 1250
 Wire Wire Line
@@ -127,7 +103,6 @@ F 3 "" H 2850 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2550 1950 2550 1850
-Connection ~ 2550 1850
 $Comp
 L power:+12V #PWR0103
 U 1 1 5E472AA8
@@ -535,43 +510,10 @@ Text Notes 4400 900  0    50   ~ 0
 Vin = -1.65 to +1.65
 Text Notes 6000 1400 0    50   ~ 0
 Gain = -6.9\nVout = -11 to +11
-Text GLabel 7900 1250 0    50   Input ~ 0
+Text GLabel 8050 1150 0    50   Input ~ 0
 D0
-Text GLabel 8750 1250 2    50   Input ~ 0
+Text GLabel 8950 1250 2    50   Input ~ 0
 GATE_OUT
-$Comp
-L power:GND #PWR0121
-U 1 1 5E4A2C78
-P 8200 1050
-F 0 "#PWR0121" H 8200 800 50  0001 C CNN
-F 1 "GND" H 8205 877 50  0000 C CNN
-F 2 "" H 8200 1050 50  0001 C CNN
-F 3 "" H 8200 1050 50  0001 C CNN
-	1    8200 1050
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0122
-U 1 1 5E4A319B
-P 8250 1300
-F 0 "#PWR0122" H 8250 1050 50  0001 C CNN
-F 1 "GND" H 8255 1127 50  0000 C CNN
-F 2 "" H 8250 1300 50  0001 C CNN
-F 3 "" H 8250 1300 50  0001 C CNN
-	1    8250 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0123
-U 1 1 5E4A4329
-P 8250 1200
-F 0 "#PWR0123" H 8250 1050 50  0001 C CNN
-F 1 "+5V" H 8265 1373 50  0000 C CNN
-F 2 "" H 8250 1200 50  0001 C CNN
-F 3 "" H 8250 1200 50  0001 C CNN
-	1    8250 1200
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_US R8
 U 1 1 5E4A526F
@@ -978,13 +920,13 @@ Connection ~ 7150 4100
 $Comp
 L Device:R_US R11
 U 1 1 5E5547AE
-P 8600 1250
-F 0 "R11" V 8393 1250 50  0000 C CNN
-F 1 "1k" V 8484 1250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8530 1250 50  0001 C CNN
-F 3 "~" H 8600 1250 50  0001 C CNN
-F 4 "MF-RES-0603-1K" H 8600 1250 50  0001 C CNN "mpn"
-	1    8600 1250
+P 8800 1250
+F 0 "R11" V 8593 1250 50  0000 C CNN
+F 1 "1k" V 8684 1250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8730 1250 50  0001 C CNN
+F 3 "~" H 8800 1250 50  0001 C CNN
+F 4 "MF-RES-0603-1K" H 8800 1250 50  0001 C CNN "mpn"
+	1    8800 1250
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1236,33 +1178,18 @@ Connection ~ 6950 1100
 $Comp
 L Amplifier_Operational:TL072 U5
 U 2 1 5E6B95A0
-P 6400 2200
-F 0 "U5" H 6400 2567 50  0000 C CNN
-F 1 "TL072" H 6400 2476 50  0000 C CNN
-F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 6400 2200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl072.pdf" H 6400 2200 50  0001 C CNN
-F 4 "TL072CPWR" H 6400 2200 50  0001 C CNN "mpn"
-	2    6400 2200
+P 8350 1250
+F 0 "U5" H 8350 1617 50  0000 C CNN
+F 1 "TL072" H 8350 1526 50  0000 C CNN
+F 2 "Package_SO:TSSOP-8_4.4x3mm_P0.65mm" H 8350 1250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl072.pdf" H 8350 1250 50  0001 C CNN
+F 4 "TL072CPWR" H 8350 1250 50  0001 C CNN "mpn"
+	2    8350 1250
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0149
-U 1 1 5E6C8D4E
-P 6100 2100
-F 0 "#PWR0149" H 6100 1850 50  0001 C CNN
-F 1 "GND" V 6105 1972 50  0000 R CNN
-F 2 "" H 6100 2100 50  0001 C CNN
-F 3 "" H 6100 2100 50  0001 C CNN
-	1    6100 2100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6100 2300 6100 2450
-Wire Wire Line
-	6100 2450 6700 2450
 Wire Wire Line
 	6700 2450 6700 2200
-Text Notes 6400 2400 0    50   ~ 0
+Text Notes 8375 1450 0    50   ~ 0
 unused
 $Comp
 L board:GD25Q64C U8
@@ -1610,4 +1537,18 @@ F 3 "" H 3850 4200 50  0001 C CNN
 $EndComp
 Text Notes 3550 4200 0    50   ~ 0
 Grounded for v5+
+$Comp
+L Regulator_Linear:LM1117-3.3 U?
+U 1 1 61112C9A
+P 2850 1850
+F 0 "U?" H 2850 2092 50  0000 C CNN
+F 1 "LM1117-3.3" H 2850 2001 50  0000 C CNN
+F 2 "" H 2850 1850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 2850 1850 50  0001 C CNN
+	1    2850 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 2550 1850
+Wire Wire Line
+	2850 2150 2850 2250
 $EndSCHEMATC
